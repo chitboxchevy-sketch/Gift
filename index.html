@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scratchy - The Distressed Typeface</title>
+    
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Define the color variables */
         :root {
-            --color-bg: #101010; /* Near-black */
+            --color-bg-dark: #101010; /* Near-black for overlays */
             --color-accent: #E91E63; /* Vibrant Magenta/Pink */
             --color-text: #E5E7EB; /* Light Gray */
         }
 
-        /* 1. LOAD THE CUSTOM FONT FILES (.otf and .ttf) */
+        /* 1. LOAD THE CUSTOM FONT FILES */
         @font-face {
             font-family: 'Scratchy';
             src: url('Scratchy-Regular.otf') format('opentype'),
@@ -23,12 +24,12 @@
             font-style: normal;
         }
         
-        /* 2. BACKGROUND & AESTHETIC (Reverted to a solid color with simulated texture) */
+        /* 2. BACKGROUND IMAGE INTEGRATION */
         body {
-            background-color: var(--color-bg);
-            /* Placeholder texture for grunge feel */
-            background-image: url('https://placehold.co/100x100/101010/333333?text=X'); 
-            background-repeat: repeat;
+            background-image: url('1000011207.png'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
             color: var(--color-text);
@@ -38,15 +39,11 @@
             padding: 1rem;
         }
 
-        /* Custom styling for the glowing title, using the actual font */
-        .scratchy-title {
-            font-family: 'Scratchy', cursive;
-            text-shadow: 
-                0 0 5px var(--color-accent), 
-                0 0 10px var(--color-accent), 
-                0 0 20px var(--color-accent);
-            line-height: 1;
-            letter-spacing: 0.15em;
+        /* 3. CONTENT CONTAINER TRANSLUCENCY (Set to 0.4 opacity) */
+        .content-container {
+            background-color: rgba(16, 16, 16, 0.4); /* Very translucent dark overlay */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
         }
 
         /* Custom button style for the download links */
@@ -69,47 +66,42 @@
             border: 1px solid var(--color-text);
         }
 
-        /* Font showcase section using the loaded font */
-        .showcase-text {
-            font-family: 'Scratchy', cursive;
+        /* Image specific styles */
+        .showcase-image-container {
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.2); /* Slight darkening for image backdrop */
         }
     </style>
 </head>
 <body>
 
-    <!-- Main container with the frame border -->
-    <div class="max-w-4xl w-full mx-auto p-6 md:p-10 frame-border rounded-lg bg-gray-900/90 shadow-2xl">
+    <div class="max-w-4xl w-full mx-auto p-6 md:p-10 frame-border rounded-lg content-container shadow-2xl">
         
-        <!-- Font Title / Branding -->
+        <!-- Font Title / Branding - ONLY KEEPING SPACE IF NEEDED, TEXT REMOVED -->
         <header class="text-center mb-10">
-            <!-- LOGO REMOVED -->
-            <h1 class="scratchy-title text-5xl md:text-7xl font-extrabold uppercase mt-4 text-white">
-                Scratchy
-            </h1>
-            <p class="text-xl text-gray-400 mt-2 tracking-widest">
-                The Signature Grunge Typeface
-            </p>
+            <!-- Title text and subtitle text have been removed to prioritize the image showcase -->
+            <div class="h-8"></div> 
         </header>
 
-        <!-- Font Showcase -->
+        <!-- Font Showcase (Now using the image) -->
         <section class="mb-12">
             <h2 class="text-2xl text-gray-200 mb-4 border-b border-gray-700 pb-2">
-                Live Preview
+                Typeface Showcase
             </h2>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-inner">
-                <p class="showcase-text text-white leading-tight break-words text-4xl md:text-6xl text-center">
-                    FEAR THE BLADE.
-                </p>
-                <p class="showcase-text text-white leading-tight break-words text-2xl md:text-4xl mt-4 text-center">
-                    0123456789 - & $ !
-                </p>
+            <div class="showcase-image-container rounded-lg shadow-inner">
+                <!-- Image used for the showcase, centered and responsive -->
+                <img 
+                    src="1000011206.png" 
+                    alt="Scratchy Typeface Visual Specimen" 
+                    class="w-full h-auto rounded"
+                >
             </div>
             <p class="text-sm text-gray-500 mt-3 text-center">
-                This text is rendered using the actual 'Scratchy' font file.
+                This image showcases the full aesthetic and styling of the Scratchy typeface.
             </p>
         </section>
 
-        <!-- Download Buttons (referencing the uploaded files) -->
+        <!-- Download Buttons -->
         <section class="text-center">
             <h2 class="text-2xl text-gray-200 mb-6">
                 Download the Typeface
