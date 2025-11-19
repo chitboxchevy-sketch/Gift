@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratchy - The Distressed Typeface</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define the color variables */
+        :root {
+            --color-bg: #101010; /* Near-black */
+            --color-accent: #E91E63; /* Vibrant Magenta/Pink */
+            --color-text: #E5E7EB; /* Light Gray */
+        }
+
+        /* 1. LOAD THE CUSTOM FONT FILES (.otf and .ttf) */
+        @font-face {
+            font-family: 'Scratchy';
+            src: url('Scratchy-Regular.otf') format('opentype'),
+                 url('Scratchy-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        /* 2. BACKGROUND & AESTHETIC (Reverted to a solid color with simulated texture) */
+        body {
+            background-color: var(--color-bg);
+            /* Placeholder texture for grunge feel */
+            background-image: url('https://placehold.co/100x100/101010/333333?text=X'); 
+            background-repeat: repeat;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            color: var(--color-text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        /* Custom styling for the glowing title, using the actual font */
+        .scratchy-title {
+            font-family: 'Scratchy', cursive;
+            text-shadow: 
+                0 0 5px var(--color-accent), 
+                0 0 10px var(--color-accent), 
+                0 0 20px var(--color-accent);
+            line-height: 1;
+            letter-spacing: 0.15em;
+        }
+
+        /* Custom button style for the download links */
+        .download-btn {
+            background-color: var(--color-accent);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .download-btn:hover {
+            background-color: #C2185B; /* Darker shade on hover */
+            box-shadow: 0 0 20px rgba(233, 30, 99, 0.8);
+            transform: translateY(-2px);
+        }
+
+        /* Border element matching the PNG frame */
+        .frame-border {
+            border: 1px solid var(--color-text);
+        }
+
+        /* Font showcase section using the loaded font */
+        .showcase-text {
+            font-family: 'Scratchy', cursive;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main container with the frame border -->
+    <div class="max-w-4xl w-full mx-auto p-6 md:p-10 frame-border rounded-lg bg-gray-900/90 shadow-2xl">
+        
+        <!-- Font Title / Branding -->
+        <header class="text-center mb-10">
+            <!-- LOGO REMOVED -->
+            <h1 class="scratchy-title text-5xl md:text-7xl font-extrabold uppercase mt-4 text-white">
+                Scratchy
+            </h1>
+            <p class="text-xl text-gray-400 mt-2 tracking-widest">
+                The Signature Grunge Typeface
+            </p>
+        </header>
+
+        <!-- Font Showcase -->
+        <section class="mb-12">
+            <h2 class="text-2xl text-gray-200 mb-4 border-b border-gray-700 pb-2">
+                Live Preview
+            </h2>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-inner">
+                <p class="showcase-text text-white leading-tight break-words text-4xl md:text-6xl text-center">
+                    FEAR THE BLADE.
+                </p>
+                <p class="showcase-text text-white leading-tight break-words text-2xl md:text-4xl mt-4 text-center">
+                    0123456789 - & $ !
+                </p>
+            </div>
+            <p class="text-sm text-gray-500 mt-3 text-center">
+                This text is rendered using the actual 'Scratchy' font file.
+            </p>
+        </section>
+
+        <!-- Download Buttons (referencing the uploaded files) -->
+        <section class="text-center">
+            <h2 class="text-2xl text-gray-200 mb-6">
+                Download the Typeface
+            </h2>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                
+                <a href="Scratchy-Regular.otf" download="Scratchy-Regular.otf" class="download-btn py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl">
+                    Download OTF (Desktop)
+                </a>
+                
+                <a href="Scratchy-Regular.ttf" download="Scratchy-Regular.ttf" class="download-btn py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl">
+                    Download TTF (Desktop/Web)
+                </a>
+                
+            </div>
+        </section>
+
+        <!-- Licensing/Instructions Footer -->
+        <footer class="mt-12 text-center pt-8 border-t border-gray-800">
+            <p class="text-sm text-gray-400">
+                Scratchy is delivered in both OpenType (.otf) and TrueType (.ttf) formats.
+            </p>
+            <p class="text-xs text-gray-500 mt-2">
+                Make sure to review the accompanying EULA for licensing details before commercial use.
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
