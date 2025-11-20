@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scratchy - The Distressed Typeface</title>
     
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
         /* Define the color variables */
         :root {
@@ -71,25 +73,33 @@
             padding: 1rem;
             background-color: rgba(0, 0, 0, 0.2); /* Slight darkening for image backdrop */
         }
+        
+        /* NEW: Social icon styling */
+        .social-icon {
+            color: var(--color-text); /* Use the light text color */
+            transition: color 0.2s ease, transform 0.2s ease;
+            font-size: 2rem; /* Make the icons a good size */
+        }
+        
+        .social-icon:hover {
+            color: var(--color-accent); /* Change color on hover to accent color */
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
 
     <div class="max-w-4xl w-full mx-auto p-6 md:p-10 frame-border rounded-lg content-container shadow-2xl">
         
-        <!-- Font Title / Branding - ONLY KEEPING SPACE IF NEEDED, TEXT REMOVED -->
         <header class="text-center mb-10">
-            <!-- Title text and subtitle text have been removed to prioritize the image showcase -->
             <div class="h-8"></div> 
         </header>
 
-        <!-- Font Showcase (Now using the image) -->
         <section class="mb-12">
             <h2 class="text-2xl text-gray-200 mb-4 border-b border-gray-700 pb-2">
             TnastyArtDaddy says "here you go.. its free.."
             </h2>
             <div class="showcase-image-container rounded-lg shadow-inner">
-                <!-- Image used for the showcase, centered and responsive -->
                 <img 
                     src="Calligraphr-Template_1_20251119144516.png" 
                     alt="Scratchy Typeface Visual Specimen" 
@@ -101,7 +111,6 @@
             </p>
         </section>
 
-        <!-- Download Buttons -->
         <section class="text-center">
             <h2 class="text-2xl text-gray-200 mb-6">
                 Download the Scratchy Font Files
@@ -119,8 +128,18 @@
             </div>
         </section>
 
-        <!-- Licensing/Instructions Footer -->
         <footer class="mt-12 text-center pt-8 border-t border-gray-800">
+            
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.tiktok.com/@tnastyartdaddy" target="_blank" aria-label="Follow on TikTok">
+                    <i class="fab fa-tiktok social-icon"></i>
+                </a>
+                
+                <a href="https://www.instagram.com/tnastyartdaddy?igsh=MzRlODBiNWFlZA==" target="_blank" aria-label="Follow on Instagram">
+                    <i class="fab fa-instagram social-icon"></i>
+                </a>
+            </div>
+            
             <p class="text-sm text-gray-400">
                 Scratchy is delivered in both OpenType (.otf) and TrueType (.ttf) formats.
             </p>
@@ -132,4 +151,3 @@
 
 </body>
 </html>
-
