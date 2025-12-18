@@ -25,6 +25,14 @@
             font-weight: normal;
             font-style: normal;
         }
+
+        @font-face {
+            font-family: 'HeistWarp';
+            src: url('HeistWarp-Regular.otf') format('opentype'),
+                 url('HeistWarp-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         
         /* 2. BACKGROUND IMAGE INTEGRATION */
         body {
@@ -91,45 +99,58 @@
 
     <div class="max-w-4xl w-full mx-auto p-6 md:p-10 frame-border rounded-lg content-container shadow-2xl">
         
-<header class="text-center mb-10">
+        <header class="text-center mb-10">
             <img 
                 src="TnastyArtDaddylogo.png" 
                 alt="TnastyArtDaddy Logo" 
                 class="mx-auto h-64 my-4" 
             >
-            </header>
+        </header>
 
         <section class="mb-12">
-            <h2 class="text-2xl text-gray-200 mb-4 border-b border-gray-700 pb-2">
+            <h2 class="text-2xl text-gray-200 mb-8 border-b border-gray-700 pb-2">
              Here you go.. It's free..
             </h2>
-            <div class="showcase-image-container rounded-lg shadow-inner">
-                <img 
-                    src="Calligraphr-Template_1_20251119144516.png" 
-                    alt="Scratchy Typeface Visual Specimen" 
-                    class="w-full h-auto rounded"
-                >
+            
+            <!-- SCRATCHY SHOWCASE -->
+            <div class="mb-16">
+                <div class="showcase-image-container rounded-lg shadow-inner mb-6">
+                    <img 
+                        src="Calligraphr-Template_1_20251119144516.png" 
+                        alt="Scratchy Typeface Visual Specimen" 
+                        class="w-full h-auto rounded"
+                    >
+                </div>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <a href="Scratchy-Regular.otf" download="Scratchy-Regular.otf" class="download-btn py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl text-center">
+                        Download OTF (Desktop)
+                    </a>
+                    <a href="Scratchy-Regular.ttf" download="Scratchy-Regular.ttf" class="download-btn py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl text-center">
+                        Download TTF (Desktop/Web)
+                    </a>
+                </div>
             </div>
-            <p class="text-sm text-gray-500 mt-3 text-center">
-                This image showcases the full aesthetic and styling of the Scratchy typeface.
-            </p>
-        </section>
 
-        <section class="text-center">
-            <h2 class="text-2xl text-gray-200 mb-6">
-                Download the Scratchy Font Files
-            </h2>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-                
-                <a href="Scratchy-Regular.otf" download="Scratchy-Regular.otf" class="download-btn py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl">
-                    Download OTF (Desktop)
-                </a>
-                
-                <a href="Scratchy-Regular.ttf" download="Scratchy-Regular.ttf" class="download-btn py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl">
-                    Download TTF (Desktop/Web)
-                </a>
-                
+            <!-- HEISTWARP SHOWCASE -->
+            <div class="mb-6">
+                <div class="showcase-image-container rounded-lg shadow-inner mb-6">
+                    <img 
+                        src="heistwarp.png" 
+                        alt="HeistWarp Typeface Visual Specimen" 
+                        class="w-full h-auto rounded"
+                        onerror="this.src='https://placehold.co/800x400/101010/E91E63?text=HeistWarp+Specimen+Pending';"
+                    >
+                </div>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <a href="HeistWarp-Regular.otf" download="HeistWarp-Regular.otf" class="download-btn py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl text-center">
+                        Download OTF (Desktop)
+                    </a>
+                    <a href="HeistWarp-Regular.ttf" download="HeistWarp-Regular.ttf" class="download-btn py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl text-center">
+                        Download TTF (Desktop/Web)
+                    </a>
+                </div>
             </div>
+
         </section>
 
         <footer class="mt-12 text-center pt-8 border-t border-gray-800">
@@ -145,7 +166,7 @@
             </div>
             
             <p class="text-sm text-gray-400">
-                Scratchy is delivered in both OpenType (.otf) and TrueType (.ttf) formats.
+                All fonts are delivered in both OpenType (.otf) and TrueType (.ttf) formats.
             </p>
             <p class="text-xs text-gray-500 mt-2">
                 Make sure to review the accompanying EULA for licensing details before commercial use.
@@ -155,3 +176,4 @@
 
 </body>
 </html>
+
